@@ -5,13 +5,13 @@ For us, infix expressions are very easy and familiar to us 'cause we've got acqu
 But for the computer, it is very hard to compute the infix expressions. The best way to let it know is that don't let it know. We just feed the expression to the computer------we can sort the single operation and let the computer compute it in order.
 
 For example, if we want to compute the expression:
-$$
+
 4.99 * 1.06 + 5.99 + 6.99 * 1.06
-$$
+
 We can convert it to a "postfix expression":
-$$
-4.99\space 1.06 * 5.99 + 6.99 \space1.06 * +
-$$
+
+4.99 1.06 * 5.99 + 6.99 1.06 * +
+
 Now, the computer can compute it easily.
 
 So first, we need to know how to convert an infix expression to a postfix expression
