@@ -114,11 +114,11 @@ queue: 'F', 'V', 'V', '&', 'F', '|', '&'
 
 stack:
 
+Now the postfix expression we want is in the queue.
+
 We should also consider what wiil happen if two '!' appear at the same time, such as "!!F", its postfix expression is "!F!". It can't be computed. So we have Rule 6:
 
 > **Rule 6**: if one '!' is at the top of the stack and meet another '!', throw the first '!' away from the stack.
-
-Now the postfix expression we want is in the queue.
 
 So how can we compute the postfix expression? We also use the example above to explain it:
 
