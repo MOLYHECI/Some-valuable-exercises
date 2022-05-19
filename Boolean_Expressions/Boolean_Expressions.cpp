@@ -26,8 +26,9 @@ queue<char> infix_to_postfix(string infix){
             }
             s.pop();
         }
+        else if(infix[i]=='!'&&!s.empty()&&s.top()=='!') s.pop();
         else{
-           while(priority(s.top())>=priority(infix[i])&&s.top()!='('){
+           while(!s.empty()&&priority(s.top())>=priority(infix[i])&&s.top()!='('){
                q.push(s.top());
                s.pop();
            }
@@ -80,8 +81,11 @@ bool getValue(queue<char> postfix){
 }
 int main(){
     string s;
-    while(cin >> s){
+    int T = 0;
+    while(getline(cin,s)&&s!=""){
         queue<char> postfix = infix_to_postfix(s);
-        cout << getValue(postfix)?'V':'F' << endl;
+        char res = getValue(postfix)?'V':'F';
+        printf("Expression %d: %c\n", ++T,res);
     }
+    return 0;
 }
