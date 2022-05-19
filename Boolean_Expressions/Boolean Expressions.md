@@ -88,7 +88,7 @@ queue: 'F', 'V', 'V', '&'
 
 stack: '&', '(', '|'
 
-> **Rule 4**: if meet an operator (not '(' or ')'), throw operators whose priority is **less than or equal to** it until the operator's priority is more than it, then push it into the stack.
+> **Rule 4**: if meet an operator (not '(' or ')'), throw operators whose priority is **more than or equal to** it until the operator's priority is less than it or '(', then push it into the stack.
 
 
 
